@@ -1,6 +1,7 @@
 package com.springpractice;
 
-public class HelloWorld {
+
+public class HelloWorld{
 
 	private String message;
 	
@@ -10,6 +11,14 @@ public class HelloWorld {
 	
 	public void getMessage() {
 		System.out.println("The Message is: " + message);
+	}
+	
+	public void init() {
+		System.out.println("Initiatiating bean");
+	}
+	
+	public void destroy() {
+		System.out.println("Destroying bean");
 	}
 	
 	}
