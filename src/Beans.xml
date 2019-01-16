@@ -10,6 +10,12 @@
 		<property name = "message" value = "this is message 1" />
 	</bean>
 	
+	<bean id = "message2" class = "com.springpractice.Message2" scope = "singleton"
+	parent = "message">
+		<property name = "message" value = "this is message 2" />
+		<property name = "message2" value = "this message also pertains to message2 bean" />
+	</bean>
+	
 	<bean class = "com.springpractice.InitMessage" />
 	
 </beans>
