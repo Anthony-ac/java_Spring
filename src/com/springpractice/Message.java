@@ -1,7 +1,7 @@
 package com.springpractice;
 
 
-public class HelloWorld{
+public class Message{
 
 	private String message;
 	

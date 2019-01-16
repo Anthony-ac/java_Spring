@@ -5,9 +5,11 @@
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
 	   http://www.springframework.org/schema/beans/spring-beans.xsd">
            
-	<bean id = "helloWorld" class = "com.springpractice.HelloWorld" scope = "singleton"
+	<bean id = "message" class = "com.springpractice.Message" scope = "singleton"
 		  init-method = "init" destroy-method = "destroy">
-		<!--<property name = "message" value = "Hello World!" />-->
+		<property name = "message" value = "this is message 1" />
 	</bean>
+	
+	<bean class = "com.springpractice.InitMessage" />
 	
 </beans>
