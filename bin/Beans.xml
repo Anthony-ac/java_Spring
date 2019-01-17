@@ -16,6 +16,13 @@
 		<property name = "message2" value = "this message also pertains to message2 bean" />
 	</bean>
 	
+	<bean id = "library" class = "com.springpractice.Library" init-method = "init" 
+	destroy-method = "destroy">
+		<property name = "book">
+			<bean id = "books" class = "com.springpractice.Books" />
+		</property>
+	</bean>
+	
 	<bean class = "com.springpractice.InitMessage" />
 	
 </beans>

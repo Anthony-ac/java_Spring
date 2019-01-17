@@ -17,6 +17,9 @@ public class MainApp {
 		msg2.getMessage();
 		msg2.getMessage2();	
 		
+		Library book1 = (Library) context.getBean("library");
+		book1.startReading();
+		
 		context.registerShutdownHook();//this only works with singleton scope beans
 	}
 
