@@ -5,6 +5,7 @@
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
 	   http://www.springframework.org/schema/beans/spring-beans.xsd">
            
+           
 	<bean id = "message" class = "com.springpractice.Message" scope = "singleton"
 		  init-method = "init" destroy-method = "destroy">
 		<property name = "message" value = "this is message 1" />
@@ -16,6 +17,7 @@
 		<property name = "message2" value = "this message also pertains to message2 bean" />
 	</bean>
 	
+	<!-- Definition of library bean using book inner bean-->
 	<bean id = "library" class = "com.springpractice.Library" init-method = "init" 
 	destroy-method = "destroy">
 		<property name = "book">
@@ -23,6 +25,36 @@
 		</property>
 	</bean>
 	
+	<!-- Adds collection properties to the collections bean definition -->
+	<bean id = "collections" class = "com.springpractice.Collections">
+		<property name = "list">
+			<list>
+				<value>bookA</value>
+				<value>bookB</value>
+				<value>bookA</value>
+			</list>
+		</property>
+		
+		<property name="set">
+			<set>
+				<value>bookA</value>
+				<value>bookB</value>
+				<value>bookC</value>
+			</set>
+		</property>
+		
+		<property name="hashMap">
+			<map>
+				<entry key = "1 " value = " bookA"/>
+				<entry key = "2 " value = " bookB"/>
+				<entry key = "3 " value = " bookC"/>
+			</map>
+		</property>
+		
+	</bean>
+	
+	
+	<!--Bean Definition for the InitMessage class-->
 	<bean class = "com.springpractice.InitMessage" />
 	
 </beans>

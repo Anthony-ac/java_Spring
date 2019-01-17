@@ -20,6 +20,11 @@ public class MainApp {
 		Library book1 = (Library) context.getBean("library");
 		book1.startReading();
 		
+		Collections listCollections = (Collections) context.getBean("collections");
+		listCollections.getList();
+		listCollections.getSet();
+		listCollections.getHashMap();
+		
 		context.registerShutdownHook();//this only works with singleton scope beans
 	}
 
